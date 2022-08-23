@@ -74,6 +74,7 @@ namespace QuiqBlog.BusinessManagers {
             post.Creator = await userManager.GetUserAsync(claimsPrincipal);
             post.CreatedOn = DateTime.Now;
             post.UpdatedOn = DateTime.Now;
+            post.Approved = true;
 
             post = await postService.Add(post);
 
